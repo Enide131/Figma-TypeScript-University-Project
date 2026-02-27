@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+# Grant workflow-level permissions so the default GITHUB_TOKEN can push
+# and publish Pages. Without these, github-actions[bot] may be denied (403).
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
