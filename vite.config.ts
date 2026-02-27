@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // IMPORTANT: set `base` to your GitHub repo name when deploying to
-  // https://<username>.github.io/<repo>/ — updated to match your repository name.
-  base: '/Figma-TypeScript-University-Project/',
+  // Use relative base so built files work reliably on GitHub Pages.
+  // This makes asset paths relative (./assets/...) which avoids path issues.
+  base: './',
   plugins: [react()],
 })
